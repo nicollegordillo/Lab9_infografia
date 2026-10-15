@@ -1,0 +1,8 @@
+serie,inicio,fin,caso,transformacion,d,D,F_tendencia,F_estacional,mejor_ARIMA,AIC,BIC,mejor_modelo,RMSE_test,MAPE_test_%
+Total_Viajeros,2009-01,2026-06,normal,log,1,0,0.777,0.374,"SARIMA(0, 1, 0)(2, 0, 0, 12)",58.7,67.1,Prophet,119081.4,54.6
+Via_Aerea,2009-01,2026-06,normal,log,0,0,0.777,0.549,"SARIMA(1, 0, 1)(1, 0, 1, 12)",190.4,207.7,Holt-Winters multiplicativo,30455.5,25.4
+Via_Terrestre,2009-01,2026-06,normal,log,1,0,0.788,0.366,"SARIMA(0, 1, 1)(2, 0, 0, 12)",102.7,113.9,Prophet,56966.9,84.0
+Via_Maritima,2009-01,2014-07,truncada_sin_test,ninguna,0,0,0.141,0.793,"SARIMA(0, 0, 0)(2, 0, 0, 12)",561.1,568.1,Seasonal naive,236.6,20.7
+Pais_Guatemala,2009-01,2022-12,test_parcial,log,1,0,0.678,0.145,"SARIMA(0, 1, 1)(2, 0, 0, 12)",3.3,14.5,Prophet,51096.0,78.7
+Pais_El Salvador,2009-01,2026-06,normal,log,1,0,0.741,0.301,"SARIMA(0, 1, 1)(0, 0, 1, 12)",426.6,435.3,Prophet,72965.7,90.5
+Pais_Estados Unidos de América,2009-01,2026-06,normal,log,1,1,0.532,0.51,"SARIMA(2, 1, 1)(1, 1, 1, 12)",368.7,385.4,Holt-Winters multiplicativo,22853.3,41.5
