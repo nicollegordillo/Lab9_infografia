@@ -1,20 +1,3 @@
-"""
-Laboratorio 9 · Infografía — Bloques 1 y 2
-CC3084 Data Science · UVG · 2026
-
-Lee las series procesadas del Laboratorio 1 y genera:
-  1. Las cifras de las tarjetas KPI (Bloque 1) y de las anotaciones (Bloque 2),
-     impresas en consola y guardadas en  <salida>/cifras_bloques_1_2.csv
-  2. La gráfica del panorama histórico 2009–2026 (Bloque 2) en SVG (editable en
-     Figma), PDF (vectorial) y PNG (300 dpi), con el tamaño exacto de su espacio
-     en el lienzo de 11 × 17 in.
-
-Uso (desde la raíz del repositorio):
-    python scripts/bloques_1_2.py --datos datos --salida salidas
-
-Requisitos: pandas, matplotlib y la fuente Inter instalada
-(https://rsms.me/inter/). Si Inter no está, se usa la sans serif por defecto.
-"""
 import argparse
 from pathlib import Path
 

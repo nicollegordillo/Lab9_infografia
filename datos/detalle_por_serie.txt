@@ -1,0 +1,211 @@
+==============================================================================
+SERIE: Total_Viajeros
+==============================================================================
+
+4.a inicio=2009-01 fin=2026-06 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.777 Fs=0.374
+4.d transformacion=log (Box-Cox λ=0.99)
+4.e d=1 D=0 | ADF nivel p=0.1156 → dif p=0.0277
+4.f auto_arima=SARIMA(0, 1, 0)(2, 0, 0, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo  AIC  BIC  LjungBox_p
+SARIMA(0, 1, 0)(2, 0, 0, 12) 58.7 67.1       1.000
+SARIMA(1, 1, 1)(1, 0, 1, 12) 70.7 85.1       0.957
+SARIMA(2, 1, 1)(1, 0, 1, 12) 72.6 89.9       0.999
+SARIMA(1, 1, 0)(1, 0, 0, 12) 77.5 86.1       0.980
+SARIMA(0, 1, 1)(0, 0, 1, 12) 86.8 95.4       1.000
+    Mejor ARIMA por AIC: SARIMA(0, 1, 0)(2, 0, 0, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo           MAE          RMSE    MAPE_%  AIC  BIC
+                     Prophet 112741.472516 119081.403002 54.595824  NaN  NaN
+ Holt-Winters multiplicativo 134374.788594 146605.574596 51.466222  NaN  NaN
+   Suavizamiento exp. simple 165372.541623 180598.233757 62.905913  NaN  NaN
+              Seasonal naive 207321.637396 219663.869357 84.910406  NaN  NaN
+SARIMA(0, 1, 0)(2, 0, 0, 12) 217464.628783 237197.654891 83.027864 58.7 67.1
+        Holt-Winters aditivo 255838.099711 276969.875635 99.871263  NaN  NaN
+
+4.k MEJOR MODELO: Prophet (RMSE=119081.4, MAPE=54.6%)
+
+==============================================================================
+SERIE: Via_Aerea
+==============================================================================
+
+4.a inicio=2009-01 fin=2026-06 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.777 Fs=0.549
+4.d transformacion=log (Box-Cox λ=1.26)
+4.e d=0 D=0 | ADF nivel p=0.2732 → dif p=0.2732
+4.f auto_arima=SARIMA(1, 0, 1)(1, 0, 1, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo   AIC   BIC  LjungBox_p
+SARIMA(1, 0, 1)(1, 0, 1, 12) 190.4 207.7       0.054
+SARIMA(1, 0, 0)(1, 0, 0, 12) 191.0 202.6       0.055
+SARIMA(2, 0, 1)(1, 0, 1, 12) 192.4 212.6       0.053
+SARIMA(0, 0, 1)(0, 0, 1, 12) 272.5 284.0       0.000
+    Mejor ARIMA por AIC: SARIMA(1, 0, 1)(1, 0, 1, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo          MAE         RMSE    MAPE_%   AIC   BIC
+ Holt-Winters multiplicativo 25453.984849 30455.534601 25.383627   NaN   NaN
+   Suavizamiento exp. simple 36970.595572 42141.220228 36.749005   NaN   NaN
+                     Prophet 47489.650848 52698.115686 48.604512   NaN   NaN
+        Holt-Winters aditivo 59502.800965 64235.751757 61.172300   NaN   NaN
+SARIMA(1, 0, 1)(1, 0, 1, 12) 60275.060529 64314.652776 63.532850 190.4 207.7
+              Seasonal naive 75512.726084 79339.803481 81.481997   NaN   NaN
+
+4.k MEJOR MODELO: Holt-Winters multiplicativo (RMSE=30455.5, MAPE=25.4%)
+
+==============================================================================
+SERIE: Via_Terrestre
+==============================================================================
+
+4.a inicio=2009-01 fin=2026-06 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.788 Fs=0.366
+4.d transformacion=log (Box-Cox λ=0.76)
+4.e d=1 D=0 | ADF nivel p=0.2766 → dif p=0.0249
+4.f auto_arima=SARIMA(0, 1, 1)(2, 0, 0, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo   AIC   BIC  LjungBox_p
+SARIMA(0, 1, 1)(2, 0, 0, 12) 102.7 113.9       0.941
+SARIMA(1, 1, 1)(1, 0, 1, 12) 111.5 125.9       0.904
+SARIMA(1, 1, 0)(1, 0, 0, 12) 112.6 121.2       0.506
+SARIMA(2, 1, 1)(1, 0, 1, 12) 112.7 130.0       0.068
+SARIMA(0, 1, 1)(0, 0, 1, 12) 121.6 130.2       1.000
+    Mejor ARIMA por AIC: SARIMA(0, 1, 1)(2, 0, 0, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo           MAE          RMSE     MAPE_%   AIC   BIC
+                     Prophet  46801.197619  56966.934868  84.040006   NaN   NaN
+ Holt-Winters multiplicativo 107808.709005 118717.126054  65.633529   NaN   NaN
+   Suavizamiento exp. simple 121715.666337 134136.258191  74.641237   NaN   NaN
+              Seasonal naive 132209.038296 144274.980520  84.833595   NaN   NaN
+SARIMA(0, 1, 1)(2, 0, 0, 12) 141611.121909 155352.257321  86.575041 102.7 113.9
+        Holt-Winters aditivo 203928.471983 222809.662022 131.494772   NaN   NaN
+
+4.k MEJOR MODELO: Prophet (RMSE=56966.9, MAPE=84.0%)
+
+==============================================================================
+SERIE: Via_Maritima
+==============================================================================
+NOTA: Serie truncada por cambio de fuente: no tiene datos en el periodo de prueba del grupo. Se analiza y modela en su periodo disponible (2009-01 a 2016-12) con un split interno 70/30.
+
+4.a inicio=2009-01 fin=2014-07 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.141 Fs=0.793
+4.d transformacion=ninguna (Box-Cox λ=0.74)
+4.e d=0 D=0 | ADF nivel p=0.3896 → dif p=0.3896
+4.f auto_arima=SARIMA(0, 0, 0)(2, 0, 0, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo   AIC   BIC  LjungBox_p
+SARIMA(0, 0, 0)(2, 0, 0, 12) 561.1 568.1       0.739
+SARIMA(1, 0, 1)(1, 0, 1, 12) 680.8 692.6       0.757
+SARIMA(2, 0, 1)(1, 0, 1, 12) 682.3 696.1       0.742
+SARIMA(1, 0, 0)(1, 0, 0, 12) 699.3 707.3       0.580
+SARIMA(0, 0, 1)(0, 0, 1, 12) 708.7 716.6       0.001
+    Mejor ARIMA por AIC: SARIMA(0, 0, 0)(2, 0, 0, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo        MAE       RMSE    MAPE_%   AIC   BIC
+              Seasonal naive 188.241379 236.598671 20.655328   NaN   NaN
+   Suavizamiento exp. simple 197.671126 238.172485 24.545403   NaN   NaN
+SARIMA(0, 0, 0)(2, 0, 0, 12) 222.520453 250.578482 25.874757 561.1 568.1
+ Holt-Winters multiplicativo 217.407197 252.061594 24.540054   NaN   NaN
+                     Prophet 224.836233 252.826192 24.913614   NaN   NaN
+        Holt-Winters aditivo 221.072691 254.010881 25.201852   NaN   NaN
+
+4.k MEJOR MODELO: Seasonal naive (RMSE=236.6, MAPE=20.7%)
+
+==============================================================================
+SERIE: Pais_Guatemala
+==============================================================================
+NOTA: Serie con test PARCIAL: la fuente deja de reportar esta categoria a partir de 2022-12. Se entrena normal y las metricas se calculan solo sobre los 21 meses reales del test.
+
+4.a inicio=2009-01 fin=2022-12 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.678 Fs=0.145
+4.d transformacion=log (Box-Cox λ=0.68)
+4.e d=1 D=0 | ADF nivel p=0.3834 → dif p=0.0345
+4.f auto_arima=SARIMA(0, 1, 1)(2, 0, 0, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo  AIC  BIC  LjungBox_p
+SARIMA(0, 1, 1)(2, 0, 0, 12)  3.3 14.5       1.000
+SARIMA(1, 1, 1)(1, 0, 1, 12)  3.3 17.7       0.672
+SARIMA(2, 1, 1)(1, 0, 1, 12)  5.6 22.9       0.715
+SARIMA(1, 1, 0)(1, 0, 0, 12) 16.1 24.8       0.997
+SARIMA(0, 1, 1)(0, 0, 1, 12) 34.8 43.4       1.000
+    Mejor ARIMA por AIC: SARIMA(0, 1, 1)(2, 0, 0, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo          MAE         RMSE    MAPE_%  AIC  BIC
+                     Prophet 48130.138618 51096.001049 78.671714  NaN  NaN
+ Holt-Winters multiplicativo 51468.528797 66583.127850 49.086054  NaN  NaN
+   Suavizamiento exp. simple 54520.191628 70273.889646 52.039219  NaN  NaN
+              Seasonal naive 64684.928571 79176.572063 70.080897  NaN  NaN
+        Holt-Winters aditivo 62596.533481 79611.260736 62.553607  NaN  NaN
+SARIMA(0, 1, 1)(2, 0, 0, 12) 66073.819268 85248.896587 63.075912  3.3 14.5
+
+4.k MEJOR MODELO: Prophet (RMSE=51096.0, MAPE=78.7%)
+
+==============================================================================
+SERIE: Pais_El Salvador
+==============================================================================
+
+4.a inicio=2009-01 fin=2026-06 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.741 Fs=0.301
+4.d transformacion=log (Box-Cox λ=0.65)
+4.e d=1 D=0 | ADF nivel p=0.0005 → dif p=0.0
+4.f auto_arima=SARIMA(3, 1, 1)(0, 0, 0, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo   AIC   BIC  LjungBox_p
+SARIMA(2, 1, 1)(1, 0, 1, 12) 421.7 439.0       0.002
+SARIMA(1, 1, 1)(1, 0, 1, 12) 422.5 436.9       0.001
+SARIMA(0, 1, 1)(0, 0, 1, 12) 426.6 435.3       0.215
+SARIMA(1, 1, 0)(1, 0, 0, 12) 428.6 437.3       0.001
+SARIMA(3, 1, 1)(0, 0, 0, 12) 440.8 455.6       0.009
+    Mejor ARIMA por AIC: SARIMA(0, 1, 1)(0, 0, 1, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo          MAE          RMSE    MAPE_%   AIC   BIC
+                     Prophet 64643.715748  72965.683524 90.537825   NaN   NaN
+ Holt-Winters multiplicativo 79734.923089  90468.327383 74.410325   NaN   NaN
+SARIMA(0, 1, 1)(0, 0, 1, 12) 81604.413650  93151.704686 74.988669 426.6 435.3
+   Suavizamiento exp. simple 83977.387399  95467.098754 78.036612   NaN   NaN
+        Holt-Winters aditivo 91189.038486 101993.399061 90.290956   NaN   NaN
+              Seasonal naive 91662.093017 102198.520321 94.053169   NaN   NaN
+
+4.k MEJOR MODELO: Prophet (RMSE=72965.7, MAPE=90.5%)
+
+==============================================================================
+SERIE: Pais_Estados Unidos de América
+==============================================================================
+
+4.a inicio=2009-01 fin=2026-06 frecuencia=Mensual (12 obs/año)
+4.c Ft=0.532 Fs=0.51
+4.d transformacion=log (Box-Cox λ=0.82)
+4.e d=1 D=1 | ADF nivel p=0.082 → dif p=0.0
+4.f auto_arima=SARIMA(0, 1, 0)(0, 1, 0, 12)
+
+4.g Modelos ARIMA evaluados:
+                      modelo   AIC   BIC  LjungBox_p
+SARIMA(2, 1, 1)(1, 1, 1, 12) 368.7 385.4       0.215
+SARIMA(1, 1, 0)(1, 1, 0, 12) 372.5 380.9       0.536
+SARIMA(1, 1, 1)(1, 1, 1, 12) 373.9 387.8       0.613
+SARIMA(0, 1, 1)(0, 1, 1, 12) 375.5 383.8       0.068
+SARIMA(0, 1, 0)(0, 1, 0, 12) 401.6 404.5       0.071
+    Mejor ARIMA por AIC: SARIMA(2, 1, 1)(1, 1, 1, 12)
+
+4.h-4.j Comparacion de modelos sobre el test:
+                      modelo          MAE         RMSE       MAPE_%   AIC   BIC
+ Holt-Winters multiplicativo 2.059189e+04 2.285328e+04 4.151986e+01   NaN   NaN
+   Suavizamiento exp. simple 3.230137e+04 3.617373e+04 6.428370e+01   NaN   NaN
+                     Prophet 3.197996e+04 3.630449e+04 6.331197e+01   NaN   NaN
+              Seasonal naive 4.073335e+04 4.373336e+04 8.868617e+01   NaN   NaN
+        Holt-Winters aditivo 4.275795e+04 4.700150e+04 8.905730e+01   NaN   NaN
+SARIMA(2, 1, 1)(1, 1, 1, 12) 5.909133e+21 4.060413e+22 8.373037e+18 368.7 385.4
+
+4.k MEJOR MODELO: Holt-Winters multiplicativo (RMSE=22853.3, MAPE=41.5%)
+

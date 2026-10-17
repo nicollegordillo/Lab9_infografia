@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="338.4pt" height="208.8pt" viewBox="0 0 338.4 208.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-17T12:13:27.745719</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 208.8 
+L 338.4 208.8 
+L 338.4 0 
+L 0 0 
+z
+" style="fill: #faf8f3"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 125.208 198.36 
+L 294.408 198.36 
+L 294.408 43.848 
+L 125.208 43.848 
+z
+" style="fill: #faf8f3"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="patch_3">
+    <path d="M 125.208 47.45328 
+L 192.369911 47.45328 
+L 192.369911 56.20896 
+L 125.208 56.20896 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #2a7364"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 125.208 57.23904 
+L 188.79419 57.23904 
+L 188.79419 65.99472 
+L 125.208 65.99472 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #9cc5bb"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2a7364" x="195.189911" y="54.590495" transform="rotate(-0 195.189911 54.590495)">119 mil</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #2a7364" x="191.61419" y="64.238286" transform="rotate(-0 191.61419 64.238286)">113 mil</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #2a7364" x="120.696" y="59.483375" transform="rotate(-0 120.696 59.483375)">Prophet</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 125.208 73.20528 
+L 207.893544 73.20528 
+L 207.893544 81.96096 
+L 125.208 81.96096 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #9aa5b1"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 125.208 82.99104 
+L 200.995381 82.99104 
+L 200.995381 91.74672 
+L 125.208 91.74672 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="210.713544" y="80.342495" transform="rotate(-0 210.713544 80.342495)">147 mil</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="203.815381" y="89.990286" transform="rotate(-0 203.815381 89.990286)">134 mil</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(58.978813 79.636469)">Holt-Winters</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(52.874125 90.834281)">multiplicativo</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 125.208 98.95728 
+L 227.065404 98.95728 
+L 227.065404 107.71296 
+L 125.208 107.71296 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #9aa5b1"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 125.208 108.74304 
+L 218.478113 108.74304 
+L 218.478113 117.49872 
+L 125.208 117.49872 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="229.885404" y="106.094495" transform="rotate(-0 229.885404 106.094495)">181 mil</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="221.298113" y="115.742286" transform="rotate(-0 221.298113 115.742286)">165 mil</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(46.760063 105.388469)">Suavizamiento</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(24.135063 116.586281)">exponencial simple</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 125.208 124.70928 
+L 249.098422 124.70928 
+L 249.098422 133.46496 
+L 125.208 133.46496 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #9aa5b1"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 125.208 134.49504 
+L 242.137403 134.49504 
+L 242.137403 143.25072 
+L 125.208 143.25072 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="251.918422" y="131.846495" transform="rotate(-0 251.918422 131.846495)">220 mil</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="244.957403" y="141.494286" transform="rotate(-0 244.957403 141.494286)">207 mil</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(45.000688 130.900469)">Seasonal naive</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(14.930375 142.578281)">(repite el último año)</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 125.208 150.46128 
+L 258.987477 150.46128 
+L 258.987477 159.21696 
+L 125.208 159.21696 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #9aa5b1"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 125.208 160.24704 
+L 247.858051 160.24704 
+L 247.858051 169.00272 
+L 125.208 169.00272 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="261.807477" y="157.598495" transform="rotate(-0 261.807477 157.598495)">237 mil</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="250.678051" y="167.246286" transform="rotate(-0 250.678051 167.246286)">217 mil</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(81.95225 156.892469)">SARIMA</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(26.706938 168.090281)">AIC 58.7 · BIC 67.1</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 125.208 176.21328 
+L 281.41901 176.21328 
+L 281.41901 184.96896 
+L 125.208 184.96896 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #9aa5b1"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 125.208 185.99904 
+L 269.500688 185.99904 
+L 269.500688 194.75472 
+L 125.208 194.75472 
+z
+" clip-path="url(#p45cb9b21da)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="284.23901" y="183.350495" transform="rotate(-0 284.23901 183.350495)">277 mil</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="272.320688" y="192.998286" transform="rotate(-0 272.320688 192.998286)">256 mil</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(58.978813 182.644469)">Holt-Winters</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1f2933" transform="translate(86.705375 193.842281)">aditivo</text>
+   </g>
+   <g id="line2d_1">
+    <path d="M 125.208 198.36 
+L 125.208 43.848 
+" clip-path="url(#p45cb9b21da)" style="fill: none; stroke: #52606d; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="6.768" y="12.503344" transform="rotate(-0 6.768 12.503344)">Error de pronóstico en el periodo de prueba</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="6.768" y="24.545406" transform="rotate(-0 6.768 24.545406)">miles de viajeros por mes · menos es mejor</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9aa5b1" x="6.768" y="37.211375" transform="rotate(-0 6.768 37.211375)">■</text>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="18.612" y="37.073406" transform="rotate(-0 18.612 37.073406)">RMSE (penaliza fallas grandes)</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #c9cfd6" x="172.584" y="37.211375" transform="rotate(-0 172.584 37.211375)">■</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="184.428" y="37.073406" transform="rotate(-0 184.428 37.073406)">MAE (error medio)</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p45cb9b21da">
+   <rect x="125.208" y="43.848" width="169.2" height="154.512"/>
+  </clipPath>
+ </defs>
+</svg>

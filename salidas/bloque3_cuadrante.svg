@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="183.6pt" viewBox="0 0 720 183.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-17T12:13:27.130943</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 183.6 
+L 720 183.6 
+L 720 0 
+L 0 0 
+z
+" style="fill: #faf8f3"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 111.6 67.5 
+L 143.9136 67.5 
+L 143.9136 75.42 
+L 111.6 75.42 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 111.6 80.82 
+L 159.0336 80.82 
+L 159.0336 88.74 
+L 111.6 88.74 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #1d5b8c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 111.6 94.14 
+L 143.2224 94.14 
+L 143.2224 102.06 
+L 111.6 102.06 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 111.6 107.46 
+L 180.1152 107.46 
+L 180.1152 115.38 
+L 111.6 115.38 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 111.6 120.78 
+L 124.128 120.78 
+L 124.128 128.7 
+L 111.6 128.7 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 111.6 134.1 
+L 137.6064 134.1 
+L 137.6064 142.02 
+L 111.6 142.02 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 111.6 147.42 
+L 155.664 147.42 
+L 155.664 155.34 
+L 111.6 155.34 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 248.4 67.5 
+L 315.5328 67.5 
+L 315.5328 75.42 
+L 248.4 75.42 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 248.4 80.82 
+L 315.5328 80.82 
+L 315.5328 88.74 
+L 248.4 88.74 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 248.4 94.14 
+L 316.4832 94.14 
+L 316.4832 102.06 
+L 248.4 102.06 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #1d5b8c"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 248.4 107.46 
+L 260.5824 107.46 
+L 260.5824 115.38 
+L 248.4 115.38 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 248.4 120.78 
+L 306.9792 120.78 
+L 306.9792 128.7 
+L 248.4 128.7 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 248.4 134.1 
+L 312.4224 134.1 
+L 312.4224 142.02 
+L 248.4 142.02 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 248.4 147.42 
+L 294.3648 147.42 
+L 294.3648 155.34 
+L 248.4 155.34 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 385.2 67.5 
+L 418.109149 67.5 
+L 418.109149 75.42 
+L 385.2 75.42 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 385.2 80.82 
+L 411.77319 80.82 
+L 411.77319 88.74 
+L 385.2 88.74 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 385.2 94.14 
+L 425.191131 94.14 
+L 425.191131 102.06 
+L 385.2 102.06 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 385.2 107.46 
+L 403.025201 107.46 
+L 403.025201 115.38 
+L 385.2 115.38 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #c9cfd6"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 385.2 120.78 
+L 425.568122 120.78 
+L 425.568122 128.7 
+L 385.2 128.7 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 385.2 134.1 
+L 435.711812 134.1 
+L 435.711812 142.02 
+L 385.2 142.02 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #1d5b8c"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 385.2 147.42 
+L 425.197213 147.42 
+L 425.197213 155.34 
+L 385.2 155.34 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 522 67.5 
+L 605.88117 67.5 
+L 605.88117 75.42 
+L 522 75.42 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 522 80.82 
+L 608.058218 80.82 
+L 608.058218 88.74 
+L 522 88.74 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 522 94.14 
+L 604.662006 94.14 
+L 604.662006 102.06 
+L 522 102.06 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 522 120.78 
+L 602.289755 120.78 
+L 602.289755 128.7 
+L 522 128.7 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #9dbad3"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 522 134.1 
+L 608.4 134.1 
+L 608.4 142.02 
+L 522 142.02 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #b9471a"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 522 147.42 
+L 608.4 147.42 
+L 608.4 155.34 
+L 522 155.34 
+z
+" clip-path="url(#pf999dbea76)" style="fill: #b9471a"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 3.6 78.12 
+L 716.4 78.12 
+" clip-path="url(#pf999dbea76)" style="fill: none; stroke: #e4e7eb; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 3.6 118.08 
+L 716.4 118.08 
+" clip-path="url(#pf999dbea76)" style="fill: none; stroke: #e4e7eb; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="111.6" y="14.420781" transform="rotate(-0 111.6 14.420781)">¿La más estacional?</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1d5b8c" x="111.6" y="34.409219" transform="rotate(-0 111.6 34.409219)">Vía aérea</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="111.6" y="52.163437" transform="rotate(-0 111.6 52.163437)">fuerza estacional (0 a 1)</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="148.9536" y="74.081406" transform="rotate(-0 148.9536 74.081406)">0.37</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="164.0736" y="87.401406" transform="rotate(-0 164.0736 87.401406)">0.55</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="148.2624" y="100.721406" transform="rotate(-0 148.2624 100.721406)">0.37</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="185.1552" y="114.041406" transform="rotate(-0 185.1552 114.041406)">0.79</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="129.168" y="127.361406" transform="rotate(-0 129.168 127.361406)">0.14</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="142.6464" y="140.681406" transform="rotate(-0 142.6464 140.681406)">0.30</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="160.704" y="154.001406" transform="rotate(-0 160.704 154.001406)">0.51</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="248.4" y="14.479375" transform="rotate(-0 248.4 14.479375)">¿La que más crece?</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1d5b8c" x="248.4" y="34.409219" transform="rotate(-0 248.4 34.409219)">Vía terrestre</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="248.4" y="52.163437" transform="rotate(-0 248.4 52.163437)">fuerza de tendencia (0 a 1)</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="320.5728" y="74.081406" transform="rotate(-0 320.5728 74.081406)">0.78</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="320.5728" y="87.401406" transform="rotate(-0 320.5728 87.401406)">0.78</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="321.5232" y="100.721406" transform="rotate(-0 321.5232 100.721406)">0.79</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="265.6224" y="114.041406" transform="rotate(-0 265.6224 114.041406)">0.14</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="312.0192" y="127.361406" transform="rotate(-0 312.0192 127.361406)">0.68</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="317.4624" y="140.681406" transform="rotate(-0 317.4624 140.681406)">0.74</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="299.4048" y="154.001406" transform="rotate(-0 299.4048 154.001406)">0.53</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="385.2" y="14.420781" transform="rotate(-0 385.2 14.420781)">¿La más volátil?</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1d5b8c" x="385.2" y="34.409219" transform="rotate(-0 385.2 34.409219)">El Salvador</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="385.2" y="52.163437" transform="rotate(-0 385.2 52.163437)">variación sobre la media</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="423.149149" y="74.081406" transform="rotate(-0 423.149149 74.081406)">38 %</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="416.81319" y="87.401406" transform="rotate(-0 416.81319 87.401406)">31 %</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="430.231131" y="100.721406" transform="rotate(-0 430.231131 100.721406)">46 %</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="408.065201" y="114.041406" transform="rotate(-0 408.065201 114.041406)">21 %</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="430.608122" y="127.361406" transform="rotate(-0 430.608122 127.361406)">47 %</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="440.751812" y="140.681406" transform="rotate(-0 440.751812 140.681406)">58 %</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="430.237213" y="154.001406" transform="rotate(-0 430.237213 154.001406)">46 %</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="522" y="14.479375" transform="rotate(-0 522 14.479375)">¿La más golpeada en pandemia?</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b9471a" x="522" y="34.360391" transform="rotate(-0 522 34.360391)">El Salvador y EE. UU.</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="522" y="52.163437" transform="rotate(-0 522 52.163437)">caída de abr 2020 vs. 2019</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="610.92117" y="74.081406" transform="rotate(-0 610.92117 74.081406)">97.1 %</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="613.098218" y="87.401406" transform="rotate(-0 613.098218 87.401406)">99.6 %</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="609.702006" y="100.721406" transform="rotate(-0 609.702006 100.721406)">95.7 %</text>
+   </g>
+   <g id="text_37">
+    <text style="font-style: italic; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="522" y="113.903437" transform="rotate(-0 522 113.903437)">sin datos 2019–2020</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="607.329755" y="127.361406" transform="rotate(-0 607.329755 127.361406)">92.9 %</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="613.44" y="140.681406" transform="rotate(-0 613.44 140.681406)">100.0 %</text>
+   </g>
+   <g id="text_40">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="613.44" y="154.001406" transform="rotate(-0 613.44 154.001406)">100.0 %</text>
+   </g>
+   <g id="text_41">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="74.219375" transform="rotate(-0 3.6 74.219375)">Total</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="87.539375" transform="rotate(-0 3.6 87.539375)">Vía aérea</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="100.859375" transform="rotate(-0 3.6 100.859375)">Vía terrestre</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="114.179375" transform="rotate(-0 3.6 114.179375)">Vía marítima*</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="127.499375" transform="rotate(-0 3.6 127.499375)">Guatemala†</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="140.819375" transform="rotate(-0 3.6 140.819375)">El Salvador</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1f2933" x="3.6" y="154.139375" transform="rotate(-0 3.6 154.139375)">EE. UU.</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="3.6" y="170.423437" transform="rotate(-0 3.6 170.423437)">* Vía marítima: serie truncada (2009–2014, cerca de 1 000 ingresos al mes); no es comparable y no entra en la elección.</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #52606d" x="3.6" y="180.503438" transform="rotate(-0 3.6 180.503438)">† Guatemala: la fuente dejó de reportar esta categoría en 2022. Total: referencia, no compite.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf999dbea76">
+   <rect x="0" y="0" width="720" height="183.6"/>
+  </clipPath>
+ </defs>
+</svg>

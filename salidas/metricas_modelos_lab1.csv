@@ -1,0 +1,43 @@
+serie,modelo,MAE,RMSE,MAPE_%,AIC,BIC
+Total_Viajeros,Prophet,112741.472516,119081.403002,54.595824,,
+Total_Viajeros,Holt-Winters multiplicativo,134374.788594,146605.574596,51.466222,,
+Total_Viajeros,Suavizamiento exp. simple,165372.541623,180598.233757,62.905913,,
+Total_Viajeros,Seasonal naive,207321.637396,219663.869357,84.910406,,
+Total_Viajeros,"SARIMA(0, 1, 0)(2, 0, 0, 12)",217464.628783,237197.654891,83.027864,58.7,67.1
+Total_Viajeros,Holt-Winters aditivo,255838.099711,276969.875635,99.871263,,
+Via_Aerea,Holt-Winters multiplicativo,25453.984849,30455.534601,25.383627,,
+Via_Aerea,Suavizamiento exp. simple,36970.595572,42141.220228,36.749005,,
+Via_Aerea,Prophet,47489.650848,52698.115686,48.604512,,
+Via_Aerea,Holt-Winters aditivo,59502.800965,64235.751757,61.1723,,
+Via_Aerea,"SARIMA(1, 0, 1)(1, 0, 1, 12)",60275.060529,64314.652776,63.53285,190.4,207.7
+Via_Aerea,Seasonal naive,75512.726084,79339.803481,81.481997,,
+Via_Terrestre,Prophet,46801.197619,56966.934868,84.040006,,
+Via_Terrestre,Holt-Winters multiplicativo,107808.709005,118717.126054,65.633529,,
+Via_Terrestre,Suavizamiento exp. simple,121715.666337,134136.258191,74.641237,,
+Via_Terrestre,Seasonal naive,132209.038296,144274.98052,84.833595,,
+Via_Terrestre,"SARIMA(0, 1, 1)(2, 0, 0, 12)",141611.121909,155352.257321,86.575041,102.7,113.9
+Via_Terrestre,Holt-Winters aditivo,203928.471983,222809.662022,131.494772,,
+Via_Maritima,Seasonal naive,188.241379,236.598671,20.655328,,
+Via_Maritima,Suavizamiento exp. simple,197.671126,238.172485,24.545403,,
+Via_Maritima,"SARIMA(0, 0, 0)(2, 0, 0, 12)",222.520453,250.578482,25.874757,561.1,568.1
+Via_Maritima,Holt-Winters multiplicativo,217.407197,252.061594,24.540054,,
+Via_Maritima,Prophet,224.836233,252.826192,24.913614,,
+Via_Maritima,Holt-Winters aditivo,221.072691,254.010881,25.201852,,
+Pais_Guatemala,Prophet,48130.138618,51096.001049,78.671714,,
+Pais_Guatemala,Holt-Winters multiplicativo,51468.528797,66583.12785,49.086054,,
+Pais_Guatemala,Suavizamiento exp. simple,54520.191628,70273.889646,52.039219,,
+Pais_Guatemala,Seasonal naive,64684.928571,79176.572063,70.080897,,
+Pais_Guatemala,Holt-Winters aditivo,62596.533481,79611.260736,62.553607,,
+Pais_Guatemala,"SARIMA(0, 1, 1)(2, 0, 0, 12)",66073.819268,85248.896587,63.075912,3.3,14.5
+Pais_El Salvador,Prophet,64643.715748,72965.683524,90.537825,,
+Pais_El Salvador,Holt-Winters multiplicativo,79734.923089,90468.327383,74.410325,,
+Pais_El Salvador,"SARIMA(0, 1, 1)(0, 0, 1, 12)",81604.41365,93151.704686,74.988669,426.6,435.3
+Pais_El Salvador,Suavizamiento exp. simple,83977.387399,95467.098754,78.036612,,
+Pais_El Salvador,Holt-Winters aditivo,91189.038486,101993.399061,90.290956,,
+Pais_El Salvador,Seasonal naive,91662.093017,102198.520321,94.053169,,
+Pais_Estados Unidos de América,Holt-Winters multiplicativo,20591.89,22853.28,41.51986,,
+Pais_Estados Unidos de América,Suavizamiento exp. simple,32301.37,36173.73,64.2837,,
+Pais_Estados Unidos de América,Prophet,31979.96,36304.49,63.31197,,
+Pais_Estados Unidos de América,Seasonal naive,40733.35,43733.36,88.68617,,
+Pais_Estados Unidos de América,Holt-Winters aditivo,42757.95,47001.5,89.0573,,
+Pais_Estados Unidos de América,"SARIMA(2, 1, 1)(1, 1, 1, 12)",5.909133e+21,4.060413e+22,8.373037e+18,368.7,385.4

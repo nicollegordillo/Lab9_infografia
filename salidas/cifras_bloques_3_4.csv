@@ -1,0 +1,46 @@
+bloque,cifra,valor,texto_infografia
+B3,Índice estacional de diciembre (mes promedio = 100),133.77153346248022,+34 %
+B3,Índice estacional de febrero,81.20111765148792,−19 %
+B3,Índice estacional de septiembre,82.7361792217361,−17 %
+B3,Índice estacional de marzo,107.84789053930763,+8 %
+B3,Índice estacional de abril,105.68321383118221,+6 %
+B3,Índice estacional de julio,107.37683703907103,+7 %
+B3,Índice estacional de agosto,104.39704040783352,+4 %
+B3,"Índice vía aérea, julio",115.97510671019971,116
+B3,"Índice vía terrestre, julio",101.23857841210024,101
+B3,"Índice vía aérea, diciembre",127.71545881673707,128
+B3,"Índice vía terrestre, diciembre",138.20713108248884,138
+B3,"Índice vía aérea, marzo–abril",99.06068140132012,99
+B3,"Índice vía terrestre, marzo–abril",112.20054071659803,112
+B3,"Índice vía aérea, agosto",94.30401896989532,94
+B3,"Índice vía terrestre, agosto",111.62552826026395,112
+B3,Serie más estacional,0.549,Vía aérea
+B3,Serie mayor tendencia,0.788,Vía terrestre
+B3,Serie más volátil,58.462745468745055,El Salvador
+B3,Serie más golpeada por la pandemia,100.0,El Salvador
+B3,Serie más golpeada por la pandemia,100.0,EE. UU.
+B3,Total: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.374,0.37 / 0.78 / 38.1 / 97.1
+B3,Vía aérea: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.549,0.55 / 0.78 / 30.8 / 99.6
+B3,Vía terrestre: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.366,0.37 / 0.79 / 46.3 / 95.7
+B3,Vía marítima: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.793,0.79 / 0.14 / 20.6 / nan
+B3,Guatemala: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.145,0.14 / 0.68 / 46.7 / 92.9
+B3,El Salvador: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.301,0.30 / 0.74 / 58.5 / 100.0
+B3,EE. UU.: fuerza estacional / tendencia / CV % / caída abr 2020 %,0.51,0.51 / 0.53 / 46.3 / 100.0
+B4,"RMSE del mejor modelo (Prophet), Lab 1",119081.403002,119 mil
+B4,"MAE del mejor modelo (Prophet), Lab 1",112741.472516,113 mil
+B4,Total · Prophet: MAE / RMSE / MAPE %,119081.403002,112741 / 119081 / 54.6
+B4,Total · Holt-Winters multiplicativo: MAE / RMSE / MAPE %,146605.574596,134375 / 146606 / 51.5
+B4,Total · Suavizamiento exp. simple: MAE / RMSE / MAPE %,180598.233757,165373 / 180598 / 62.9
+B4,Total · Seasonal naive: MAE / RMSE / MAPE %,219663.869357,207322 / 219664 / 84.9
+B4,"Total · SARIMA(0, 1, 0)(2, 0, 0, 12): MAE / RMSE / MAPE %",237197.654891,217465 / 237198 / 83.0
+B4,Total · Holt-Winters aditivo: MAE / RMSE / MAPE %,276969.875635,255838 / 276970 / 99.9
+B4,Series (de 7) donde Prophet fue el mejor,4.0,4 de 7
+B4,Series (de 7) donde Holt-Winters multiplicativo fue el mejor,2.0,2 de 7
+B4,Series (de 7) donde Seasonal naive fue el mejor,1.0,1 de 7
+B4,Series donde SARIMA fue el mejor,0.0,0 de 7
+B4,Meses reales dentro de la banda de 80 %,0.20634920634920634,21 %
+B4,Meses reales dentro de la banda de 95 %,0.6507936507936508,65 %
+B4,RMSE de Prophet reproducido para la gráfica (Lab 1: 119081),119546.33819087803,119546
+B4,MAE de Prophet reproducido para la gráfica (Lab 1: 112741),113181.10721848792,113181
+B4,Promedio mensual real en el periodo de prueba,241617.1670279873,242 mil
+B4,Error medio (MAE) de Prophet sobre el promedio del test,46.66120123117774,47 %
