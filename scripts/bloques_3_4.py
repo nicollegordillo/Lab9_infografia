@@ -26,10 +26,10 @@ JADE_CLARO = "#9CC5BB"  # mismo jade aclarado: error medio (MAE) del ganador
 GRIS_CLARO = "#C9CFD6"  # gris aclarado: error medio (MAE) del resto
 
 # Tamaño (pulgadas) del espacio de cada gráfica en el lienzo de 11 × 17 in
-TAM_ESTACIONALIDAD = (10.0, 2.0)
-TAM_CUADRANTE = (10.0, 2.55)
-TAM_MODELOS = (4.7, 2.9)
-TAM_PROYECCION = (5.1, 2.9)
+TAM_ESTACIONALIDAD = (10.0, 1.8)
+TAM_CUADRANTE = (10.0, 1.7)
+TAM_MODELOS = (4.7, 2.1)
+TAM_PROYECCION = (5.1, 2.1)
 
 MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"]
 NOMBRES = {
@@ -122,15 +122,15 @@ def grafica_estacionalidad(s: pd.DataFrame, salida: Path, tam=TAM_ESTACIONALIDAD
 
     fig = plt.figure(figsize=tam)
     fig.patch.set_facecolor(FONDO)
-    ax = fig.add_axes([0.04, 0.12, 0.58, 0.72])
-    ax2 = fig.add_axes([0.70, 0.12, 0.28, 0.64])
+    ax = fig.add_axes([0.04, 0.12, 0.58, 0.68])
+    ax2 = fig.add_axes([0.70, 0.12, 0.28, 0.655])
     for a in (ax, ax2):
         a.set_facecolor(FONDO)
         for lado in ("top", "right", "left"):
             a.spines[lado].set_visible(False)
         a.spines["bottom"].set_color(GRIS)
 
-    fig.text(0.04, 0.955, "Índice estacional del total de ingresos, 2009–2019 (mes promedio = 100)",
+    fig.text(0.04, 0.95, "Índice estacional del total de ingresos, 2009–2019 (mes promedio = 100)",
              fontsize=10.5, fontweight="bold", color=TEXTO, va="center")
 
     # ---- barras: desviación respecto al mes promedio ----
@@ -139,51 +139,53 @@ def grafica_estacionalidad(s: pd.DataFrame, salida: Path, tam=TAM_ESTACIONALIDAD
     colores = [AZUL if v >= 103 else GRIS for v in idx.values]
     ax.bar(meses, desv, bottom=100, width=0.68, color=colores, zorder=3)
     ax.axhline(100, color=TEXTO2, lw=1.0, zorder=4)
-    ax.set_ylim(68, 162)
+    ax.set_ylim(68, 160)
     ax.set_xlim(0.4, 12.6)
     ax.set_xticks(meses)
     ax.set_xticklabels(MESES)
     ax.set_yticks([80, 100, 120])
     ax.grid(axis="y", color=CUADRICULA, lw=0.8, zorder=0)
-    ax.tick_params(axis="x", labelsize=10.5, colors=TEXTO2, length=0, pad=5)
+    ax.tick_params(axis="x", labelsize=10.5, colors=TEXTO2, length=0, pad=4)
     ax.tick_params(axis="y", labelsize=10, colors=TEXTO2, length=0)
+    CLAVE = {2, 3, 4, 7, 9, 12}   # solo se rotulan los meses que cuentan la historia
     for m, v in zip(meses, idx.values):
+        if m not in CLAVE:
+            continue
         pico = v >= 103
-        ax.text(m, v + 2 if v >= 100 else v - 2, neg(f"{v - 100:+.0f} %"), ha="center",
+        ax.text(m, v + 1.5 if v >= 100 else v - 1.5, neg(f"{v - 100:+.0f} %"), ha="center",
                 va="bottom" if v >= 100 else "top", fontsize=10,
                 fontweight="bold" if pico or v < 85 else "normal",
                 color=TEXTO if pico or v < 85 else TEXTO2)
 
     def evento(x, y, texto, ha="center"):
         ax.text(x, y, texto, ha=ha, va="bottom", fontsize=10.5, fontweight="bold",
-                color=AZUL, linespacing=1.25)
+                color=AZUL, linespacing=1.2)
 
-    evento(3.5, 117, "Semana Santa\n(mar–abr)")
-    evento(7.5, 117, "Vacaciones de medio\naño · Bono 14 (jul)")
-    evento(11.4, 146, "Aguinaldo, Navidad\ny fin de año", ha="right")
+    evento(3.5, 121, "Semana Santa\n(mar–abr)")
+    evento(7.3, 121, "Vacaciones\nBono 14 (jul)")
+    evento(11.15, 118, "Aguinaldo,\nNavidad y\nfin de año", ha="right")
 
     # ---- puntos: ¿qué vía sube en cada pico? ----
     filas = [("Semana Santa (mar–abr)", (aerea[3] + aerea[4]) / 2, (terr[3] + terr[4]) / 2),
              ("Vacaciones (jul)", aerea[7], terr[7]),
-             ("Agosto", aerea[8], terr[8]),
              ("Fin de año (dic)", aerea[12], terr[12])]
-    sep = 1.3   # separación entre filas (unidades del eje)
+    sep = 1.6
     ax2.set_xlim(78, 148)
-    ax2.set_ylim(-0.8, sep * (len(filas) - 1) + 0.7)
+    ax2.set_ylim(-0.8, sep * (len(filas) - 1) + 0.55)
     ax2.invert_yaxis()
     ax2.set_yticks([])
     ax2.set_xticks([80, 100, 120, 140])
-    ax2.tick_params(axis="x", labelsize=10, colors=TEXTO2, length=0, pad=5)
+    ax2.tick_params(axis="x", labelsize=10, colors=TEXTO2, length=0, pad=4)
     ax2.axvline(100, color=TEXTO2, lw=1.0, zorder=2)
     ax2.grid(axis="x", color=CUADRICULA, lw=0.8, zorder=0)
     ax2.set_axisbelow(True)
     for i, (nombre, va_, vt) in enumerate(filas):
         y = i * sep + 0.3
-        ax2.text(78.5, y - 0.38, nombre, fontsize=10, color=TEXTO, va="bottom", ha="left", zorder=6,
-                 bbox=dict(facecolor=FONDO, edgecolor="none", pad=1.0))
+        ax2.text(78.5, y - 0.36, nombre, fontsize=10, color=TEXTO, va="bottom", ha="left", zorder=6,
+                 bbox=dict(facecolor=FONDO, edgecolor="none", pad=0.8))
         ax2.plot([min(va_, vt), max(va_, vt)], [y] * 2, color=GRIS_CLARO, lw=2.2, zorder=3)
-        ax2.scatter([va_], [y], s=58, color=AZUL, zorder=5)
-        ax2.scatter([vt], [y], s=58, color=JADE, marker="D", zorder=5)
+        ax2.scatter([va_], [y], s=50, color=AZUL, zorder=5)
+        ax2.scatter([vt], [y], s=50, color=JADE, marker="D", zorder=5)
         izq_es_aerea = va_ < vt
         ax2.text(min(va_, vt) - 2.4, y, f"{(va_ if izq_es_aerea else vt):.0f}",
                  ha="right", va="center", fontsize=10, fontweight="bold",
@@ -192,27 +194,36 @@ def grafica_estacionalidad(s: pd.DataFrame, salida: Path, tam=TAM_ESTACIONALIDAD
                  ha="left", va="center", fontsize=10, fontweight="bold",
                  color=JADE if izq_es_aerea else AZUL)
 
-    fig.text(0.70, 0.955, "¿Qué vía empuja cada pico?", fontsize=10.5, fontweight="bold",
+    fig.text(0.70, 0.95, "¿Qué vía empuja cada pico?", fontsize=10.5, fontweight="bold",
              color=TEXTO, va="center")
-    fig.text(0.70, 0.865, "●", fontsize=10, color=AZUL, va="center")
-    fig.text(0.717, 0.865, "aérea", fontsize=10, color=AZUL, fontweight="bold", va="center")
-    fig.text(0.79, 0.865, "◆", fontsize=10, color=JADE, va="center")
-    fig.text(0.807, 0.865, "terrestre", fontsize=10, color=JADE, fontweight="bold", va="center")
+    fig.text(0.70, 0.835, "●", fontsize=10, color=AZUL, va="center")
+    fig.text(0.717, 0.835, "aérea", fontsize=10, color=AZUL, fontweight="bold", va="center")
+    fig.text(0.79, 0.835, "◆", fontsize=10, color=JADE, va="center")
+    fig.text(0.807, 0.835, "terrestre", fontsize=10, color=JADE, fontweight="bold", va="center")
 
     guardar(fig, salida, "bloque3_estacionalidad")
     return idx, aerea, terr
 
 
 # ------------------------------------------------------------------ Bloque 3b
+MOSTRAR = ["Via_Aerea", "Via_Terrestre", "Pais_El Salvador", "Pais_Estados Unidos de América"]
+
+
 def grafica_cuadrante(q: pd.DataFrame, salida: Path, tam=TAM_CUADRANTE):
-    """Tabla visual con barras: una columna por pregunta, una fila por serie."""
+    """Tabla visual con barras: una columna por pregunta, una fila por serie comparable.
+
+    El ganador se decide sobre las series elegibles (todas menos el total y la vía marítima).
+    Se dibujan solo las series comparables (MOSTRAR); la marítima y Guatemala, cuyas series se
+    cortan, se mencionan en la nota al pie con su cifra."""
     w, h = tam
+    q = q.drop(index="Total_Viajeros")
     fig = plt.figure(figsize=tam)
     fig.patch.set_facecolor(FONDO)
     ax = fig.add_axes([0, 0, 1, 1])
     ax.set_xlim(0, w); ax.set_ylim(h, 0); ax.axis("off")
 
-    elegibles = [c for c in q.index if c not in ("Total_Viajeros", "Via_Maritima")]
+    elegibles = [c for c in q.index if c != "Via_Maritima"]
+    filas = [c for c in q.index if c in MOSTRAR]
     columnas = [  # (columna, pregunta, medida, color del ganador, formato del valor)
         ("Fs", "¿La más estacional?", "fuerza estacional (0 a 1)", AZUL, lambda v: f"{v:.2f}"),
         ("Ft", "¿La que más crece?", "fuerza de tendencia (0 a 1)", AZUL, lambda v: f"{v:.2f}"),
@@ -220,7 +231,7 @@ def grafica_cuadrante(q: pd.DataFrame, salida: Path, tam=TAM_CUADRANTE):
         ("Caida", "¿La más golpeada en pandemia?", "caída de abr 2020 vs. 2019", TERRACOTA, lambda v: f"{v:.1f} %"),
     ]
     x_nom, x0, ancho_col, ancho_barra = 0.05, 1.55, 1.9, 1.2
-    y_fila0, alto_fila = 0.9, 0.185
+    y_fila0, alto_fila = 0.60, 0.205
     escala = {"Fs": 1.0, "Ft": 1.0, "CV": 100.0, "Caida": 100.0}   # todas parten de cero
 
     resp = {}
@@ -230,34 +241,30 @@ def grafica_cuadrante(q: pd.DataFrame, salida: Path, tam=TAM_CUADRANTE):
         ganadores = [c for c in elegibles if q.loc[c, col] >= top - 1e-9]
         resp[col] = ganadores
         nombres = " y ".join(NOMBRES[c] for c in ganadores)
-        ax.text(x, 0.16, pregunta, fontsize=10, color=TEXTO2, va="center")
-        ax.text(x, 0.43, nombres, fontsize=12.5, fontweight="bold", color=c_gan, va="center")
-        ax.text(x, 0.69, medida, fontsize=9, color=TEXTO2, va="center")
-        for i, c in enumerate(q.index):
+        ax.text(x, 0.10, pregunta, fontsize=10, color=TEXTO2, va="center")
+        ax.text(x, 0.285, nombres, fontsize=12.5, fontweight="bold", color=c_gan, va="center")
+        ax.text(x, 0.45, medida, fontsize=9.5, color=TEXTO2, va="center")
+        for i, c in enumerate(filas):
             y = y_fila0 + i * alto_fila + alto_fila / 2
             v = q.loc[c, col]
-            if np.isnan(v):
-                ax.text(x, y, "sin datos 2019–2020", fontsize=9, color=TEXTO2, va="center", style="italic")
-                continue
             gana = c in ganadores
-            color = c_gan if gana else (GRIS_CLARO if c == "Via_Maritima" else AZUL_CLARO)
+            color = c_gan if gana else AZUL_CLARO
             largo = max(v / escala[col], 0) * ancho_barra
-            ax.add_patch(Rectangle((x, y - 0.055), largo, 0.11, color=color, lw=0))
-            ax.text(x + largo + 0.07, y, neg(fmt(v)), fontsize=9.5, va="center",
+            ax.add_patch(Rectangle((x, y - 0.05), largo, 0.10, color=color, lw=0))
+            ax.text(x + largo + 0.07, y, neg(fmt(v)), fontsize=10, va="center",
                     fontweight="bold" if gana else "normal", color=TEXTO if gana else TEXTO2)
 
-    for i, c in enumerate(q.index):
+    for i, c in enumerate(filas):
         y = y_fila0 + i * alto_fila + alto_fila / 2
-        ax.text(x_nom, y, NOMBRES[c] + MARCAS.get(c, ""), fontsize=10, va="center",
-                fontweight="bold" if c == "Total_Viajeros" else "normal", color=TEXTO)
-    # separadores: bajo el total y entre vías y países
-    for fila in (1, 4):
-        yl = y_fila0 + fila * alto_fila
-        ax.plot([x_nom, w - 0.05], [yl, yl], color=CUADRICULA, lw=1.0)
-    ax.text(x_nom, 2.33, "* Vía marítima: serie truncada (2009–2014, cerca de 1 000 ingresos al mes); "
-            "no es comparable y no entra en la elección.", fontsize=9, color=TEXTO2, va="center")
-    ax.text(x_nom, 2.47, "† Guatemala: la fuente dejó de reportar esta categoría en 2022. "
-            "Total: referencia, no compite.", fontsize=9, color=TEXTO2, va="center")
+        ax.text(x_nom, y, NOMBRES[c], fontsize=10.5, va="center", color=TEXTO)
+    yl = y_fila0 + 2 * alto_fila   # separador entre vías y países
+    ax.plot([x_nom, w - 0.05], [yl, yl], color=CUADRICULA, lw=1.0)
+    gan_ft = resp["Ft"][0]
+    sig = q.loc[[c for c in elegibles if c != gan_ft], "Ft"].idxmax()
+    ax.text(x_nom, 1.56, f"Marítima (serie hasta 2016; estacionalidad {q.loc['Via_Maritima', 'Fs']:.2f}) y Guatemala "
+            f"(hasta 2022) no compiten: series cortadas. Tendencia: {NOMBRES[gan_ft].lower()} "
+            f"{q.loc[gan_ft, 'Ft']:.2f} apenas supera a {NOMBRES[sig].lower()} {q.loc[sig, 'Ft']:.2f}.",
+            fontsize=9, color=TEXTO2, va="center")
 
     guardar(fig, salida, "bloque3_cuadrante")
     return resp
@@ -269,46 +276,48 @@ def grafica_modelos(met: pd.DataFrame, salida: Path, tam=TAM_MODELOS):
     t = met[met["serie"] == "Total_Viajeros"].sort_values("RMSE").reset_index(drop=True)
     etiquetas = {
         "Prophet": "Prophet",
-        "Holt-Winters multiplicativo": "Holt-Winters\nmultiplicativo",
-        "Suavizamiento exp. simple": "Suavizamiento\nexponencial simple",
-        "Seasonal naive": "Seasonal naive\n(repite el último año)",
-        "Holt-Winters aditivo": "Holt-Winters\naditivo",
+        "Holt-Winters multiplicativo": "Holt-Winters multiplicativo",
+        "Suavizamiento exp. simple": "Suavizamiento exp. simple",
+        "Seasonal naive": "Seasonal naive",
+        "Holt-Winters aditivo": "Holt-Winters aditivo",
     }
     w, h = tam
     fig = plt.figure(figsize=tam)
     fig.patch.set_facecolor(FONDO)
-    ax = fig.add_axes([0.37, 0.05, 0.50, 0.74])
+    ax = fig.add_axes([0.45, 0.05, 0.43, 0.69])
     ax.set_facecolor(FONDO)
     n = len(t)
+    sarima = None
     for i, r in t.iterrows():
         gana = i == 0
         c_rmse, c_mae = (JADE, JADE_CLARO) if gana else (GRIS, GRIS_CLARO)
         ax.barh(i - 0.19, r["RMSE"] / 1e3, height=0.34, color=c_rmse, zorder=3)
         ax.barh(i + 0.19, r["MAE"] / 1e3, height=0.34, color=c_mae, zorder=3)
-        ax.text(r["RMSE"] / 1e3 + 5, i - 0.19, f"{r['RMSE'] / 1e3:.0f} mil", va="center", fontsize=10,
-                fontweight="bold", color=JADE if gana else TEXTO)
-        ax.text(r["MAE"] / 1e3 + 5, i + 0.19, f"{r['MAE'] / 1e3:.0f} mil", va="center", fontsize=9.5,
-                color=JADE if gana else TEXTO2)
+        t1 = ax.text(r["RMSE"] / 1e3 + 5, i, f"{r['RMSE'] / 1e3:.0f}", va="center", fontsize=9.5,
+                     fontweight="bold", color=JADE if gana else TEXTO)
+        ax.annotate(f" · {r['MAE'] / 1e3:.0f}", xy=(1, 0.5), xycoords=t1, va="center", ha="left",
+                    fontsize=9.5, color=JADE if gana else TEXTO2)
         nombre = etiquetas.get(r["modelo"])
-        if nombre is None:   # SARIMA: lleva el único criterio AIC/BIC que le aplica
-            nombre = f"SARIMA\nAIC {r['AIC']:.1f} · BIC {r['BIC']:.1f}"
-        ax.text(-8, i, nombre, ha="right", va="center", fontsize=10, linespacing=1.2,
+        if nombre is None:   # SARIMA: su AIC/BIC va en la nota al pie
+            nombre = "SARIMA"
+            sarima = (r["AIC"], r["BIC"])
+        ax.text(-6, i, nombre, ha="right", va="center", fontsize=10,
                 fontweight="bold" if gana else "normal", color=JADE if gana else TEXTO)
     ax.set_ylim(n - 0.5, -0.5)
-    ax.set_xlim(0, 300)
+    ax.set_xlim(0, 340)
     ax.set_yticks([])
     ax.set_xticks([])
     for lado in ("top", "right", "left", "bottom"):
         ax.spines[lado].set_visible(False)
     ax.axvline(0, color=TEXTO2, lw=1.0, zorder=4)
 
-    fig.text(0.02, 0.955, "Error de pronóstico en el periodo de prueba", fontsize=10.5,
+    fig.text(0.02, 0.94, "Error de pronóstico en el periodo de prueba", fontsize=10.5,
              fontweight="bold", color=TEXTO, va="center")
-    fig.text(0.02, 0.895, "miles de viajeros por mes · menos es mejor", fontsize=9.5, color=TEXTO2, va="center")
     fig.text(0.02, 0.835, "■", fontsize=10, color=GRIS, va="center")
-    fig.text(0.055, 0.835, "RMSE (penaliza fallas grandes)", fontsize=9.5, color=TEXTO2, va="center")
-    fig.text(0.51, 0.835, "■", fontsize=10, color=GRIS_CLARO, va="center")
-    fig.text(0.545, 0.835, "MAE (error medio)", fontsize=9.5, color=TEXTO2, va="center")
+    fig.text(0.055, 0.835, "RMSE", fontsize=9.5, color=TEXTO2, va="center")
+    fig.text(0.16, 0.835, "■", fontsize=10, color=GRIS_CLARO, va="center")
+    fig.text(0.195, 0.835, "MAE · miles de viajeros por mes", fontsize=9.5,
+             color=TEXTO2, va="center")
     guardar(fig, salida, "bloque4_modelos")
     return t
 
@@ -320,7 +329,7 @@ def grafica_proyeccion(s: pd.DataFrame, f: pd.DataFrame, salida: Path, tam=TAM_P
     T = s["Total_Viajeros"] / 1e3
     fig = plt.figure(figsize=tam)
     fig.patch.set_facecolor(FONDO)
-    ax = fig.add_axes([0.075, 0.27, 0.905, 0.50])
+    ax = fig.add_axes([0.075, 0.25, 0.905, 0.47])
     ax.set_facecolor(FONDO)
 
     f = (f / 1e3).clip(lower=0)   # no puede haber viajeros negativos
@@ -334,9 +343,9 @@ def grafica_proyeccion(s: pd.DataFrame, f: pd.DataFrame, salida: Path, tam=TAM_P
     ax.plot(real.index, real.values, color=AZUL, lw=1.8, zorder=4)
     ax.plot(f.index, f["yhat"], color=JADE, lw=2.2, zorder=5)
 
-    ax.set_ylim(0, 500)
+    ax.set_ylim(0, 540)
     ax.set_xlim(pd.Timestamp("2018-12-01"), pd.Timestamp("2028-02-01"))
-    ax.set_yticks([0, 100, 200, 300, 400])
+    ax.set_yticks([0, 200, 400])
     ax.set_xticks([pd.Timestamp(f"{a}-01-01") for a in (2020, 2022, 2024, 2026)])
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
     ax.grid(axis="y", color=CUADRICULA, lw=0.8)
@@ -351,27 +360,24 @@ def grafica_proyeccion(s: pd.DataFrame, f: pd.DataFrame, salida: Path, tam=TAM_P
     fin = f.index[-1] + pd.Timedelta(days=30)
     ax.text(fin, real.iloc[-1], "Real", color=AZUL, fontweight="bold", fontsize=10, va="center")
     ax.text(fin, f["yhat"].iloc[-1], "Estimación", color=JADE, fontweight="bold", fontsize=10, va="center")
-    ax.text(inicio - pd.Timedelta(days=40), 487, "Entrenamiento", ha="right", va="center",
+    ax.text(inicio - pd.Timedelta(days=40), 512, "Entrenamiento", ha="right", va="center",
             fontsize=10, color=TEXTO2)
-    ax.text(inicio + pd.Timedelta(days=40), 487, "Prueba", ha="left", va="center", fontsize=10, color=TEXTO2)
+    ax.text(inicio + pd.Timedelta(days=40), 512, "Prueba", ha="left", va="center", fontsize=10, color=TEXTO2)
 
     # encabezado de la gráfica
-    fig.text(0.02, 0.955, "Total de ingresos por mes: real vs. estimación de Prophet", fontsize=10.5,
+    fig.text(0.02, 0.94, "Modelo ganador, Prophet: real vs. estimación", fontsize=10.5,
              fontweight="bold", color=TEXTO, va="center")
-    fig.text(0.02, 0.895, "miles de viajeros · Prophet fue el modelo con menor RMSE del Lab 1",
-             fontsize=9.5, color=TEXTO2, va="center")
-    for x, alfa, txt in ((0.02, 0.28, "banda del 80 %"), (0.30, 0.14, "banda del 95 %")):
-        fig.patches.append(Rectangle((x, 0.808), 0.03, 0.026, transform=fig.transFigure,
+    for x, alfa, txt in ((0.02, 0.28, "banda del 80 %"), (0.29, 0.14, "banda del 95 %")):
+        fig.patches.append(Rectangle((x, 0.80), 0.03, 0.05, transform=fig.transFigure,
                                      facecolor=JADE, alpha=alfa + 0.05, lw=0))
-        fig.text(x + 0.04, 0.821, txt, fontsize=9.5, color=JADE, fontweight="bold", va="center")
+        fig.text(x + 0.04, 0.825, txt, fontsize=9.5, color=JADE, fontweight="bold", va="center")
+    fig.text(0.98, 0.825, "miles de viajeros por mes", fontsize=9.5, color=TEXTO2, va="center", ha="right")
 
     # lectura honesta: cuántos meses reales cayeron dentro de cada banda
     dentro = {n: np.mean((real.values >= f[f"lo{n}"].values) & (real.values <= f[f"hi{n}"].values))
               for n in (80, 95)}
-    fig.text(0.02, 0.115, f"Solo {dentro[80] * 100:.0f} % de los meses reales cayó en la banda de 80 %",
+    fig.text(0.02, 0.05, f"Solo {dentro[80] * 100:.0f} % de los meses reales cayó en la banda de 80 %.",
              fontsize=9.5, color=TEXTO, va="center", fontweight="bold")
-    fig.text(0.02, 0.055, f"({dentro[95] * 100:.0f} % en la de 95 %). No anticipó el rebote tras 2020.",
-             fontsize=9.5, color=TEXTO, va="center")
     guardar(fig, salida, "bloque4_proyeccion")
     return dentro
 

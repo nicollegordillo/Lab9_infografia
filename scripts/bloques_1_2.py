@@ -18,6 +18,9 @@ GRIS = "#9AA5B1"       # contexto
 CUADRICULA = "#E4E7EB"
 TERRACOTA = "#B9471A"  # tónico: pandemia / anomalía
 
+# Tamaño (pulgadas) del espacio del panorama en el lienzo de 11 × 17 in
+TAM_PANORAMA = (10.0, 2.2)
+
 # ------------------------------------------------------------------ fuente
 def configurar_fuente():
     nombres = {f.name for f in font_manager.fontManager.ttflist}
@@ -135,9 +138,7 @@ def grafica_panorama(s: pd.DataFrame, salida: Path, ancho_in=10.0, alto_in=3.0):
     a09, a19, a22 = (Ttot[str(a)].sum() / 1e6 for a in (2009, 2019, 2022))
 
     # 1. Década de crecimiento
-    nota(pd.Timestamp("2009-03-01"), 505,
-         [f"Una década de crecimiento: ×{a19 / a09:.1f}",
-          f"{a09:.2f} M ingresos (2009) → {a19:.2f} M (2019)"])
+    nota(pd.Timestamp("2009-03-01"), 505, [f"Una década de crecimiento: ×{a19 / a09:.1f}"])
 
     # 2. Récord de diciembre 2019
     pico_f = T[:"2019-12"].idxmax(); pico_v = T[:"2019-12"].max()
@@ -151,9 +152,8 @@ def grafica_panorama(s: pd.DataFrame, salida: Path, ancho_in=10.0, alto_in=3.0):
     ax.scatter([min_f], [min_v], s=40, color=TERRACOTA, zorder=5, edgecolor=FONDO, linewidth=1.5)
     nota(pd.Timestamp("2019-08-01"), 168,
          ["Mar 2020: cierre de fronteras",
-          f"abril cae a {min_v:.0f} mil ({caida:.0f} %)".replace("-", "−"),
-          "Sep 2020: reabre La Aurora"], ha="right", color=TERRACOTA)
-    guia(pd.Timestamp("2019-09-01"), 40, min_f - pd.Timedelta(days=20), min_v + 4)
+          f"abril cae a {min_v:.0f} mil ({caida:.0f} %)".replace("-", "−")], ha="right", color=TERRACOTA)
+    guia(pd.Timestamp("2019-09-01"), 62, min_f - pd.Timedelta(days=20), min_v + 4)
 
     # 4. Rebote 2022 (pico de diciembre 2022)
     r_f = T["2022"].idxmax(); r_v = T[r_f]
@@ -191,7 +191,7 @@ def main():
     cifras.to_csv(a.salida / "cifras_bloques_1_2.csv", index=False)
     print(f"Fuente usada: {familia}\n")
     print(cifras[["bloque", "cifra", "texto_infografia"]].to_string(index=False))
-    grafica_panorama(s, a.salida)
+    grafica_panorama(s, a.salida, *TAM_PANORAMA)
     print(f"\nGráfica guardada en {a.salida}/bloque2_panorama.(svg|pdf|png)")
 
 
